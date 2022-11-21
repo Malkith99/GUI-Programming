@@ -1,7 +1,7 @@
 
 		.myclass{
 			color: lightcyan;
-			font-size: 20px;
+			font-size: 20px; 
 		}
 
 		table,th,td
@@ -9,3 +9,23 @@
 			border: 1px solid red;
 			border-collapse: collapse;
 		}
+h1[class*="header"]
+
+{
+		background: yellow;
+ 	color: rgba(0,0, 0,1);  /* #9340CA, */
+ 	text-align : center ;
+ 	text-decoration: underline;
+ 	height: 70px;
+ 	width: 400px;
+ 	position: relative;
+ 	left :400px;
+
+
+}
+@media all and (max-width : 500px)
+{
+	p{
+		background: yellow;
+	}
+}

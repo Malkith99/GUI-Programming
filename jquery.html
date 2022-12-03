@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title> JQuery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script >
+		$(document).ready(function()
+		{
+			//$(p1).hide();
+			//$("*").hide();
+        	$("p").dblclick(function()
+        	{
+        		$(this).hide();
+
+       		 });
+        	/*$("p").hover(function()
+        	{
+        		$(this).hide();
+
+       		 });*/
+        	/*$("#btn1").click(function()
+        	{
+        		$("#p1").hide();
+
+       		 });*/
+        	$("#btn1").on('click',function()
+        	{
+        		$("#p1").hide('slow',function()
+        			{
+        				alert("Hidden");          //callback function 
+        			});
+
+       		 });
+        	$("#btn2").click(function()
+        	{
+        		$("#p1").toggle();
+
+       		 });
+        	$("#textbox").focus(function()
+        	{
+        	   alert("Focus")	
+        	});
+        	$("#textbox").blur(function()
+        	{
+        	   alert("Blur")	
+        	});
+        	$("#btn3").click(function()
+        	{
+        		$("#p1").css({color: 'red',background:'yellow'});
+
+       		 });
+
+
+		});
+		
+
+	</script>
+</head>
+<body>
+	<input type="text" id="textbox">
+	<button id='btn1'>Hide Me!</button>
+	<button id='btn2'>Show Me!</button>
+	<button id='btn3'>Colour Me!</button>
+	<h1>Main Header</h1>
+	<hr>
+	<h2> Sub Heading 1</h2>
+	<p class="description" id ='p1'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<br>
+	<h2> Sub Heading 2</h2>
+	<p class="description" id ='p2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<hr>
+	<ol class ="List">
+		<li> Item 1</li>
+		<li> Item 2</li>
+		<li> Item 3</li>
+		<li> Item 4</li>
+		<li> Item 5</li>
+		<li> Item 6</li>
+		<li> Item 7</li>
+	</ol>
+	<br>
+	
+
+
+</body>
+</html>
